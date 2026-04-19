@@ -59,7 +59,7 @@ URL after first deploy: `https://btw-site.fly.dev`.
 
 - `/` — home: hero, stats, services, toolbox, work, process, contact CTA
 - `/about` — manifesto, timeline, stack, CTA
-- `/notes` — case studies index (6 projects)
+- `/notes` — case studies index (4 projects)
 - `/notes/[slug]` — case study detail
 - `/contact` — form (Resend + Telegram notification)
 

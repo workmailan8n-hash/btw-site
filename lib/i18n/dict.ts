@@ -136,7 +136,7 @@ export const dict = {
       statsLabels: {
         shipped: 'Case studies',
         live: 'In production',
-        nda: 'Under NDA',
+        stacks: 'Unique stacks',
         years: 'Years of work',
       },
       readCase: 'Read case →',
@@ -314,7 +314,7 @@ export const dict = {
       statsLabels: {
         shipped: 'Кейсів',
         live: 'У продакшні',
-        nda: 'Під NDA',
+        stacks: 'Унікальних стеків',
         years: 'Років роботи',
       },
       readCase: 'Читати кейс →',

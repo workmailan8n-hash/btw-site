@@ -9,8 +9,6 @@ import { motion } from 'motion/react';
  * - courseai              → cascading module bars (course structure)
  * - content-channel       → radiating pulse waves (publishing)
  * - btw-studio-site       → orbiting rings (brand)
- * - fintech-ops-platform  → candlestick ticks (fintech)
- * - rag-analytics-engine  → neural cloud (RAG)
  */
 export function NoteArt({ slug, color }: { slug: string; color: string }) {
   const common = {
@@ -183,110 +181,6 @@ export function NoteArt({ slug, color }: { slug: string; color: string }) {
         >
           BTW<tspan fill={color}>.</tspan>
         </text>
-      </svg>
-    );
-  }
-
-  if (slug === 'fintech-ops-platform') {
-    // Candlestick ticks
-    const bars = [
-      { x: 40, h: 18, y: 50 },
-      { x: 52, h: 32, y: 40 },
-      { x: 64, h: 24, y: 46 },
-      { x: 76, h: 44, y: 34 },
-      { x: 88, h: 36, y: 40 },
-      { x: 100, h: 60, y: 26 },
-      { x: 112, h: 48, y: 32 },
-      { x: 124, h: 70, y: 22 },
-      { x: 136, h: 58, y: 28 },
-      { x: 148, h: 80, y: 18 },
-      { x: 160, h: 64, y: 26 },
-    ];
-    return (
-      <svg {...common}>
-        <line x1={32} y1={98} x2={172} y2={98} stroke={color} strokeWidth={0.6} opacity={0.4} />
-        {bars.map((b, i) => (
-          <motion.rect
-            key={i}
-            x={b.x}
-            y={b.y}
-            width={6}
-            height={b.h}
-            rx={1}
-            fill={color}
-            opacity={0.85 - i * 0.04}
-            initial={{ scaleY: 0, originY: 1 }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-            style={{ transformOrigin: `${b.x + 3}px 98px` }}
-          />
-        ))}
-        <motion.path
-          d="M 40 58 L 52 46 L 64 52 L 76 40 L 88 46 L 100 32 L 112 38 L 124 28 L 136 34 L 148 22 L 160 30"
-          stroke={color}
-          strokeWidth={1.2}
-          fill="none"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, delay: 0.4 }}
-        />
-      </svg>
-    );
-  }
-
-  if (slug === 'rag-analytics-engine') {
-    // Dense neural cloud
-    const nodes: { x: number; y: number; r: number }[] = [];
-    const rnd = (seed: number) => {
-      const x = Math.sin(seed * 9999) * 10000;
-      return x - Math.floor(x);
-    };
-    for (let i = 0; i < 28; i++) {
-      nodes.push({
-        x: 30 + rnd(i * 2 + 1) * 140,
-        y: 15 + rnd(i * 2 + 2) * 90,
-        r: 1.2 + rnd(i + 100) * 1.8,
-      });
-    }
-    return (
-      <svg {...common}>
-        {nodes.map((n1, i) =>
-          nodes.slice(i + 1).map((n2, j) => {
-            const d = Math.hypot(n1.x - n2.x, n1.y - n2.y);
-            if (d > 32) return null;
-            return (
-              <motion.line
-                key={`${i}-${j}`}
-                x1={n1.x}
-                y1={n1.y}
-                x2={n2.x}
-                y2={n2.y}
-                stroke={color}
-                strokeWidth={0.4}
-                opacity={Math.max(0, 0.4 - d / 100)}
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 + i * 0.01 }}
-              />
-            );
-          })
-        )}
-        {nodes.map((n, i) => (
-          <motion.circle
-            key={i}
-            cx={n.x}
-            cy={n.y}
-            r={n.r}
-            fill={color}
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: i * 0.02 }}
-          />
-        ))}
       </svg>
     );
   }

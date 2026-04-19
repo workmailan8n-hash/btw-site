@@ -41,28 +41,6 @@ const projects: Project[] = [
       'radial-gradient(ellipse at 60% 30%, rgba(184,166,255,0.4), transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(255,184,107,0.2), transparent 60%)',
   },
   {
-    name: 'Fintech ops platform',
-    tagKey: 'Stealth · internal tool',
-    year: '2025',
-    stealth: true,
-    status: 'NDA',
-    stack: ['Next.js', 'Supabase', 'Claude', 'MCP'],
-    accent: '#FFB86B',
-    gradient:
-      'radial-gradient(ellipse at 50% 40%, rgba(255,184,107,0.35), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.2), transparent 60%)',
-  },
-  {
-    name: 'RAG analytics engine',
-    tagKey: 'Stealth · AI infra',
-    year: '2025',
-    stealth: true,
-    status: 'NDA',
-    stack: ['Ollama', 'LangChain', 'Postgres', 'pgvector'],
-    accent: '#B8A6FF',
-    gradient:
-      'radial-gradient(ellipse at 40% 50%, rgba(184,166,255,0.35), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(158,255,110,0.22), transparent 60%)',
-  },
-  {
     name: 'Content Channel',
     tagKey: 'Multi-platform publisher',
     year: '2025',
@@ -111,8 +89,7 @@ export function Work() {
           {t.work.heading} <span className="text-[color:var(--color-fg-dim)]">/ 2024–2026</span>
         </h2>
         <span className="hidden md:block font-mono text-xs text-[color:var(--color-fg-meta)]">
-          {projects.length} {t.work.counterOne} · {projects.filter((p) => p.stealth).length}{' '}
-          {t.work.counterTwo}
+          {projects.length} {t.work.counterOne}
         </span>
       </div>
 

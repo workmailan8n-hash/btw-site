@@ -14,7 +14,7 @@ export function NotesIndexContent() {
   const counts = {
     shipped: notes.length,
     live: notes.filter((n) => n.status === 'Live').length,
-    nda: notes.filter((n) => n.nda).length,
+    stacks: new Set(notes.flatMap((n) => n.stack)).size,
     years: new Set(notes.map((n) => n.year)).size,
   };
 
@@ -35,7 +35,7 @@ export function NotesIndexContent() {
       <dl className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-y border-[color:var(--color-fg-dim)]/30 py-8">
         <Stat value={String(counts.shipped)} label={t.notes.statsLabels.shipped} />
         <Stat value={String(counts.live)} label={t.notes.statsLabels.live} />
-        <Stat value={String(counts.nda)} label={t.notes.statsLabels.nda} />
+        <Stat value={String(counts.stacks)} label={t.notes.statsLabels.stacks} />
         <Stat value={String(counts.years)} label={t.notes.statsLabels.years} />
       </dl>
 

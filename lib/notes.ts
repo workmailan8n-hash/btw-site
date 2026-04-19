@@ -203,66 +203,6 @@ export const notes: CaseStudy[] = [
       },
     ],
   },
-  {
-    slug: 'fintech-ops-platform',
-    title: 'Fintech ops platform',
-    tagline: 'Stealth internal tool for an early-stage fintech — MCP-driven operations console.',
-    year: '2025',
-    status: 'NDA',
-    nda: true,
-    role: 'Stealth · internal tool',
-    timeline: '6 weeks',
-    accent: '#FFB86B',
-    gradient:
-      'radial-gradient(ellipse at 50% 40%, rgba(255,184,107,0.35), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.2), transparent 60%)',
-    stack: ['Next.js', 'Supabase', 'Claude', 'MCP', 'Resend'],
-    metrics: [
-      { value: '6 wk', label: 'MVP delivery' },
-      { value: 'SOC2', label: 'Compliance target' },
-      { value: 'MCP', label: 'Primary interface' },
-    ],
-    tags: ['nda', 'fintech', 'ai'],
-    sections: [
-      {
-        heading: 'Under NDA',
-        body: 'Project details are confidential. High-level: we built an internal operations console for an early-stage fintech where the primary interface is an MCP-equipped agent answering natural-language queries over a Supabase backend. Compliance-aware, read-only by default, write actions gated through human approval.',
-      },
-      {
-        heading: 'What we can share',
-        body: 'Stack: Next.js for the shell, Supabase for data layer with RLS, Claude via Anthropic SDK with MCP for tool use, Resend for ops notifications. Shipped MVP in six weeks including compliance review.',
-      },
-    ],
-  },
-  {
-    slug: 'rag-analytics-engine',
-    title: 'RAG analytics engine',
-    tagline: 'Stealth AI infrastructure — self-hosted RAG over client-owned Postgres.',
-    year: '2025',
-    status: 'NDA',
-    nda: true,
-    role: 'Stealth · AI infra',
-    timeline: '8 weeks',
-    accent: '#B8A6FF',
-    gradient:
-      'radial-gradient(ellipse at 40% 50%, rgba(184,166,255,0.35), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(158,255,110,0.22), transparent 60%)',
-    stack: ['Ollama', 'LangChain', 'Postgres', 'pgvector', 'Docker'],
-    metrics: [
-      { value: '8 wk', label: 'Foundation to first queries' },
-      { value: '100%', label: 'Self-hosted, no SaaS' },
-      { value: 'pgvector', label: 'Vector store' },
-    ],
-    tags: ['nda', 'ai', 'infra'],
-    sections: [
-      {
-        heading: 'Under NDA',
-        body: 'A private RAG stack running entirely on the client infrastructure — Ollama for local inference, pgvector for retrieval, LangChain for orchestration. Zero data leaves the customer environment; no third-party SaaS in the loop.',
-      },
-      {
-        heading: 'What we can share',
-        body: 'Shipped in eight weeks. Evals framework included (hit-rate at k, answer relevance). Docker-composed for on-prem deployment with a minimal ops surface.',
-      },
-    ],
-  },
 ];
 
 export function getNote(slug: string) {
