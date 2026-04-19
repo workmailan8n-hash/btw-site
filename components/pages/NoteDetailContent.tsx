@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLocale } from '@/lib/i18n/context';
 import type { CaseStudy } from '@/lib/notes';
+import { ProcessReceipts } from '@/components/notes/ProcessReceipts';
 
 export function NoteDetailContent({ note }: { note: CaseStudy }) {
   const { t } = useLocale();
@@ -118,6 +119,8 @@ export function NoteDetailContent({ note }: { note: CaseStudy }) {
           </ul>
         </div>
       </section>
+
+      {note.receipts && <ProcessReceipts receipts={note.receipts} accent={note.accent} />}
 
       <article className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
         <div className="max-w-[720px] mx-auto">

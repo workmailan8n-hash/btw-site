@@ -147,6 +147,21 @@ export const dict = {
       openProject: 'Open project ↗',
       ctaHeading: 'Have a similar project?',
       ctaBody: 'We reply within 24 hours. Usually faster.',
+      receipts: {
+        heading: 'Process receipts',
+        sub: 'The pipeline of agents that built it, the count of commits and deploys, and the wall-clock time from spec to production. No decks — just the audit trail.',
+        shippedIn: 'Shipped in',
+        commits: 'Commits',
+        deploys: 'Deploys',
+        agents: 'Agents in pipeline',
+        pipeline: 'Agent pipeline',
+      },
+    },
+    builtWith: {
+      heading: 'Built with — tooling footprint across shipped projects',
+      unit: 'project',
+      unitPlural: 'projects',
+      note: 'Counts are derived from the stack field on each case study. This is the tooling we ship on, not a laundry list of things we know.',
     },
     about: {
       heading: 'About',
@@ -325,6 +340,21 @@ export const dict = {
       openProject: 'Відкрити проєкт ↗',
       ctaHeading: 'Є подібний проєкт?',
       ctaBody: 'Відповідаємо за 24 години. Зазвичай швидше.',
+      receipts: {
+        heading: 'Чеки процесу',
+        sub: 'Пайплайн агентів, які зібрали продукт, кількість комітів і деплоїв, і реальний час від спеки до продакшну. Без слайдів — лише аудит-трейл.',
+        shippedIn: 'Зарелізено за',
+        commits: 'Комітів',
+        deploys: 'Деплоїв',
+        agents: 'Агентів у пайплайні',
+        pipeline: 'Пайплайн агентів',
+      },
+    },
+    builtWith: {
+      heading: 'Built with — tooling footprint у зарелізених продуктах',
+      unit: 'проєкт',
+      unitPlural: 'проєктів',
+      note: 'Цифри автоматично виведені з поля stack кожного кейсу. Це інструменти, на яких ми справді релізимо, а не «що ми знаємо».',
     },
     about: {
       heading: 'Про нас',

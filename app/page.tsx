@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/Hero';
 import { Stats } from '@/components/sections/Stats';
+import { BuiltWith } from '@/components/sections/BuiltWith';
 import { Services } from '@/components/sections/Services';
 import { Toolbox } from '@/components/sections/Toolbox';
 import { Work } from '@/components/sections/Work';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <Stats />
+        <BuiltWith />
         <Services />
         <Toolbox />
         <Work />

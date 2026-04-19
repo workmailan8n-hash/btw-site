@@ -1,5 +1,13 @@
 export type Metric = { value: string; label: string };
 
+export type ProcessReceipts = {
+  agents: string[];
+  commits?: number;
+  deploys?: number;
+  shippedIn?: string;
+  specRef?: string;
+};
+
 export type CaseStudy = {
   slug: string;
   title: string;
@@ -16,6 +24,7 @@ export type CaseStudy = {
   metrics: Metric[];
   sections: { heading: string; body: string }[];
   tags: string[];
+  receipts?: ProcessReceipts;
 };
 
 export const notes: CaseStudy[] = [
@@ -49,6 +58,18 @@ export const notes: CaseStudy[] = [
       { value: '3 wk', label: 'Spec to production' },
     ],
     tags: ['product', 'realtime', 'devtools'],
+    receipts: {
+      agents: [
+        'architect',
+        'developer',
+        'test-engineer',
+        'performance-engineer',
+        'devops-automator',
+      ],
+      commits: 340,
+      deploys: 3,
+      shippedIn: '3 weeks',
+    },
     sections: [
       {
         heading: 'Context',
@@ -99,6 +120,20 @@ export const notes: CaseStudy[] = [
       { value: '1 ADR', label: 'Auth provider pivot' },
     ],
     tags: ['ai', 'saas', 'subscription'],
+    receipts: {
+      agents: [
+        'product-manager',
+        'business-analyst',
+        'architect',
+        'prisma-expert',
+        'developer',
+        'reviewer',
+        'test-engineer',
+      ],
+      commits: 180,
+      deploys: 12,
+      shippedIn: '4 weeks',
+    },
     sections: [
       {
         heading: 'Context',
@@ -138,6 +173,12 @@ export const notes: CaseStudy[] = [
       { value: '0', label: 'Manual copy-paste' },
     ],
     tags: ['automation', 'content', 'internal'],
+    receipts: {
+      agents: ['architect', 'telegram-bot-expert', 'prompt-engineer', 'developer'],
+      commits: 80,
+      deploys: 4,
+      shippedIn: '2 weeks',
+    },
     sections: [
       {
         heading: 'Context',
@@ -184,6 +225,21 @@ export const notes: CaseStudy[] = [
       { value: '2 d', label: 'Spec to live' },
     ],
     tags: ['brand', '3d', 'editorial'],
+    receipts: {
+      agents: [
+        'product-manager',
+        'business-analyst',
+        'brand-identity-designer',
+        'motion-designer',
+        '3d-scene-designer',
+        'ux-designer',
+        'developer',
+        'reviewer',
+      ],
+      commits: 52,
+      deploys: 4,
+      shippedIn: '2 days',
+    },
     sections: [
       {
         heading: 'Context',
