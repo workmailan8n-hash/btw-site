@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale } from '@/lib/i18n/context';
+import { BtwMark } from './BtwMark';
 
 export function SiteFooter() {
   const { t } = useLocale();
@@ -13,8 +14,8 @@ export function SiteFooter() {
     >
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>
-          <span className="font-[var(--font-display)] text-xl tracking-[-0.02em]">
-            BTW<span className="text-[color:var(--color-accent)]">.</span>
+          <span className="block text-[color:var(--color-fg-primary)]">
+            <BtwMark className="h-6 w-auto" title="BTW" />
           </span>
           <p className="mt-3 text-sm text-[color:var(--color-fg-meta)] max-w-[48ch]">
             {t.footer.tagline}{' '}

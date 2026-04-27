@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import { BtwMark } from '@/components/layout/BtwMark';
 
 /**
  * Hero fallback — mobile default + loading state for desktop r3f scene.
@@ -50,18 +51,12 @@ export function HeroFallback() {
         }}
       >
         <span
-          className="font-[var(--font-display)] text-[56px] sm:text-[64px] tracking-[-0.04em] text-[color:var(--color-fg-primary)]"
-          style={{ lineHeight: 1 }}
+          className="text-[color:var(--color-fg-primary)]"
+          style={{
+            filter: 'drop-shadow(0 0 16px rgba(158,255,110,0.35))',
+          }}
         >
-          BTW
-          <span
-            className="text-[color:var(--color-accent)]"
-            style={{
-              textShadow: '0 0 16px rgba(158,255,110,0.8)',
-            }}
-          >
-            .
-          </span>
+          <BtwMark className="w-[180px] sm:w-[200px] h-auto" title="BTW" />
         </span>
       </motion.div>
     </div>

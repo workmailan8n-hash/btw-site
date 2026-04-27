@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ease, dur } from '@/lib/motion/tokens';
 import { useLocale } from '@/lib/i18n/context';
+import { BtwMark } from './BtwMark';
 
 export function SnakeMenu() {
   const { locale, setLocale, t } = useLocale();
@@ -57,10 +58,10 @@ export function SnakeMenu() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: dur.reveal, ease: ease.expoOut, delay: 0.12 }}
-            className="font-[var(--font-display)] text-2xl tracking-[-0.02em] text-[color:var(--color-fg-primary)]"
+            className="text-[color:var(--color-fg-primary)]"
           >
-            <Link href="/" aria-label="BTW home">
-              BTW<span className="text-[color:var(--color-accent)]">.</span>
+            <Link href="/" aria-label="BTW home" className="block">
+              <BtwMark className="h-7 md:h-8 w-auto" title="BTW home" />
             </Link>
           </motion.span>
 
@@ -141,8 +142,8 @@ export function SnakeMenu() {
               transition={{ duration: dur.base, ease: ease.expoOut }}
             >
               <div className="flex items-center justify-between px-6 py-6 border-b border-[color:var(--color-fg-dim)]/40">
-                <span className="font-[var(--font-display)] text-xl tracking-[-0.02em]">
-                  BTW<span className="text-[color:var(--color-accent)]">.</span>
+                <span className="text-[color:var(--color-fg-primary)]">
+                  <BtwMark className="h-6 w-auto" title="BTW" />
                 </span>
                 <button
                   type="button"
