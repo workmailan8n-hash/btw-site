@@ -97,6 +97,26 @@ export const notes: CaseStudy[] = [
         body: 'Live at the link above. Four weeks from empty repo to first paying subscriber. Stripe subscription billing, email-only auth, course generation from any of three input formats. What we ship for clients with similar SaaS briefs.',
       },
     ],
+    media: [
+      {
+        kind: 'video',
+        src: '/notes/courseai/tour.mp4',
+        aspect: 'wide',
+        caption: 'Landing tour — hero → features → pricing',
+      },
+      {
+        kind: 'image',
+        src: '/notes/courseai/cover.png',
+        aspect: 'wide',
+        caption: 'Hero — Raw content in. Structured knowledge out.',
+      },
+      {
+        kind: 'image',
+        src: '/notes/courseai/signin.png',
+        aspect: 'wide',
+        caption: 'Sign-in — sample generated course preview',
+      },
+    ],
   },
   {
     slug: 'content-channel',
