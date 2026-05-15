@@ -23,6 +23,8 @@ export type CaseStudy = {
   href?: string;
   overrideHref?: string;
   nda?: boolean;
+  /** Hide from /notes index and homepage preview. Detail page still works for direct links. */
+  hidden?: boolean;
   accent: string;
   gradient: string;
   stack: string[];
@@ -126,6 +128,9 @@ export const notes: CaseStudy[] = [
       'Automated content pipeline — one Obsidian note goes live across Telegram, LinkedIn and Instagram on schedule. Zero copy-paste.',
     year: '2025',
     status: 'Live',
+    // Subsumed by Nox (2026-04-28, see vault/projects/Nox.md). Hidden from index/homepage.
+    // Detail page at /notes/content-channel remains accessible for legacy links.
+    hidden: true,
     role: 'Content ops automation · we eat our own dogfood',
     timeline: '2 weeks · Nov 2025',
     href: 'https://t.me/btw_aitech',

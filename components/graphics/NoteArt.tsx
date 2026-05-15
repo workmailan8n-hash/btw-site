@@ -234,6 +234,112 @@ export function NoteArt({ slug, color }: { slug: string; color: string }) {
     );
   }
 
+  if (slug === 'keyst') {
+    // Key glyph + lock + scattered "code" dots
+    return (
+      <svg {...common}>
+        {/* Vertical accent ticks (key teeth pattern) */}
+        {Array.from({ length: 5 }).map((_, i) => (
+          <motion.rect
+            key={`tick-${i}`}
+            x={40 + i * 8}
+            y={66}
+            width={4}
+            height={i % 2 === 0 ? 18 : 12}
+            fill={color}
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+            style={{ transformOrigin: `${42 + i * 8}px 66px` }}
+          />
+        ))}
+        {/* Key bow (ring) */}
+        <motion.circle
+          cx={92}
+          cy={70}
+          r={16}
+          fill="none"
+          stroke={color}
+          strokeWidth={3}
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        />
+        <motion.circle
+          cx={92}
+          cy={70}
+          r={6}
+          fill={color}
+          opacity={0.4}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+        />
+        {/* Lock body to the right */}
+        <motion.rect
+          x={130}
+          y={62}
+          width={26}
+          height={22}
+          rx={2}
+          fill={color}
+          opacity={0.85}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 0.85 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+        />
+        {/* Lock shackle */}
+        <motion.path
+          d="M 136 62 L 136 56 Q 136 50 143 50 Q 150 50 150 56 L 150 62"
+          fill="none"
+          stroke={color}
+          strokeWidth={3}
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        />
+        {/* Keyhole */}
+        <motion.circle
+          cx={143}
+          cy={71}
+          r={2}
+          fill="black"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7 }}
+        />
+        {/* Scattered crypto-currency dots in corners */}
+        {[
+          [18, 22],
+          [180, 26],
+          [22, 110],
+          [178, 108],
+          [170, 18],
+        ].map(([x, y], i) => (
+          <motion.circle
+            key={`dot-${i}`}
+            cx={x}
+            cy={y}
+            r={1.8}
+            fill={color}
+            opacity={0.5}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 + i * 0.05 }}
+          />
+        ))}
+      </svg>
+    );
+  }
+
   // Fallback — subtle dot grid
   return (
     <svg {...common}>

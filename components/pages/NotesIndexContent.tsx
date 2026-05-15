@@ -9,13 +9,14 @@ const yearOrder = (y: string) => parseInt(y, 10);
 
 export function NotesIndexContent() {
   const { t } = useLocale();
-  const sorted = [...notes].sort((a, b) => yearOrder(b.year) - yearOrder(a.year));
+  const visible = notes.filter((n) => !n.hidden);
+  const sorted = [...visible].sort((a, b) => yearOrder(b.year) - yearOrder(a.year));
 
   const counts = {
-    shipped: notes.length,
-    live: notes.filter((n) => n.status === 'Live').length,
-    stacks: new Set(notes.flatMap((n) => n.stack)).size,
-    years: new Set(notes.map((n) => n.year)).size,
+    shipped: visible.length,
+    live: visible.filter((n) => n.status === 'Live').length,
+    stacks: new Set(visible.flatMap((n) => n.stack)).size,
+    years: new Set(visible.map((n) => n.year)).size,
   };
 
   return (

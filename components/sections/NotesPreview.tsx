@@ -49,30 +49,34 @@ export function NotesPreview() {
       </div>
 
       <ul className="mt-8 divide-y divide-[color:var(--color-fg-dim)]/30">
-        {notes.map((n, i) => (
-          <motion.li
-            key={n.slug}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{
-              duration: dur.reveal,
-              ease: ease.expoOut,
-              delay: i * stagger.card,
-            }}
-          >
-            <Link
-              href={`/notes/${n.slug}`}
-              className="group grid grid-cols-1 md:grid-cols-[140px_1fr_auto] gap-4 md:gap-8 py-6 items-baseline transition-colors hover:bg-[color:var(--color-bg-elev-1)]/40 hover:pl-4 border-l-2 border-transparent hover:border-[color:var(--color-accent)]"
+        {notes
+          .filter((n) => !n.hidden)
+          .map((n, i) => (
+            <motion.li
+              key={n.slug}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{
+                duration: dur.reveal,
+                ease: ease.expoOut,
+                delay: i * stagger.card,
+              }}
             >
-              <time className="font-mono text-xs text-[color:var(--color-fg-meta)]">{n.date}</time>
-              <span className="text-xl text-[color:var(--color-fg-primary)]">{n.title}</span>
-              <span className="font-mono text-xs text-[color:var(--color-fg-meta)]">
-                {n.tags.join(' · ')}
-              </span>
-            </Link>
-          </motion.li>
-        ))}
+              <Link
+                href={`/notes/${n.slug}`}
+                className="group grid grid-cols-1 md:grid-cols-[140px_1fr_auto] gap-4 md:gap-8 py-6 items-baseline transition-colors hover:bg-[color:var(--color-bg-elev-1)]/40 hover:pl-4 border-l-2 border-transparent hover:border-[color:var(--color-accent)]"
+              >
+                <time className="font-mono text-xs text-[color:var(--color-fg-meta)]">
+                  {n.date}
+                </time>
+                <span className="text-xl text-[color:var(--color-fg-primary)]">{n.title}</span>
+                <span className="font-mono text-xs text-[color:var(--color-fg-meta)]">
+                  {n.tags.join(' · ')}
+                </span>
+              </Link>
+            </motion.li>
+          ))}
       </ul>
     </section>
   );
