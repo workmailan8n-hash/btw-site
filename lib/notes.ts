@@ -21,6 +21,7 @@ export type CaseStudy = {
   role: string;
   timeline: string;
   href?: string;
+  overrideHref?: string;
   nda?: boolean;
   accent: string;
   gradient: string;
@@ -237,6 +238,52 @@ export const notes: CaseStudy[] = [
       {
         heading: 'Outcome',
         body: 'In production since April 2026. Eight tabs (today, tasks, backlog, email, content, projects, chat, news) plus free-text Sonnet chat with 24 XML tools. The same pipeline that publishes daily to @btw_aitech also drafts replies to Gmail, forwards 2FA codes in under a minute, scans nine repos for orphan commits, and generates a weekly sprint every Monday. 412 tests, three architectural invariants, one user.',
+      },
+    ],
+  },
+  {
+    slug: 'keyst',
+    title: 'Keyst',
+    tagline:
+      'Self-hosted white-label storefront for digital key resellers. Own your stack — no platform risk, no marketplace fees, no Stripe ToS issues.',
+    year: '2026',
+    status: 'Live',
+    role: 'Product · full-cycle from spec to sales surface',
+    timeline: '4 weeks · May 2026',
+    href: 'https://codes-shop-demo.fly.dev',
+    overrideHref: '/keyst',
+    accent: '#E8274B',
+    gradient:
+      'radial-gradient(ellipse at 70% 30%, rgba(232,39,75,0.35), transparent 55%), radial-gradient(ellipse at 20% 75%, rgba(17,24,39,0.8), transparent 60%)',
+    stack: [
+      'Next.js 14',
+      'TypeScript',
+      'Prisma',
+      'Postgres',
+      'Redis',
+      'BullMQ',
+      'Docker',
+      'Fly.io',
+    ],
+    metrics: [
+      { value: '5', label: 'Payment adapters (crypto-native)' },
+      { value: 'AES-256', label: 'Key encryption at rest' },
+      { value: '<45min', label: 'VPS to live store via wizard' },
+      { value: '$499', label: 'Setup price' },
+    ],
+    tags: ['product', 'ecommerce', 'self-hosted'],
+    sections: [
+      {
+        heading: 'Context',
+        body: 'Sellix — the dominant self-hosted key storefront — was seized by US authorities in 2024. Sellpass rebranded to Antistock. A window opened for a clean, ownable alternative. Keyst is that alternative: single-tenant, self-hosted, crypto-native, with no platform risk.',
+      },
+      {
+        heading: 'Approach',
+        body: 'Next.js 14 App Router, Prisma + Postgres for persistence, Redis + BullMQ for async key delivery. Five payment adapters built to an interface: NOWPayments, CryptoCloud, FreeKassa, Fondy, and a custom stub. AES-256-GCM for key and payment-config encryption. Docker + Fly.io for the demo; VPS + Docker for customer installs.',
+      },
+      {
+        heading: 'Outcome',
+        body: 'Live demo at codes-shop-demo.fly.dev. Setup Wizard takes a blank VPS to a live, branded store in under 45 minutes. Product page at btw-studio.fly.dev/keyst. First customer target: June 2026.',
       },
     ],
   },

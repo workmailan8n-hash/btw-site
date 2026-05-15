@@ -14,6 +14,7 @@ export function SnakeMenu() {
   const links = [
     { href: '/notes', label: t.nav.notes },
     { href: '/writing', label: t.nav.writing },
+    { href: '/keyst', label: 'keyst' },
     { href: '/labs', label: t.nav.labs },
     { href: '/open-source', label: t.nav.oss },
     { href: '/about', label: t.nav.about },

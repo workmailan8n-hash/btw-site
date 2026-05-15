@@ -51,8 +51,9 @@ export async function POST(req: Request) {
   // Telegram notification (best-effort, non-blocking)
   if (TG_BOT_TOKEN && TG_OWNER_CHAT_ID) {
     try {
+      const isKeyst = data.projectType === 'keyst';
       const text = [
-        '<b>New brief from btw.studio</b>',
+        isKeyst ? '<b>🔑 Keyst lead from btw.studio</b>' : '<b>New brief from btw.studio</b>',
         '',
         `<b>From:</b> ${escapeHtml(data.name)} &lt;${escapeHtml(data.email)}&gt;`,
         `<b>Type:</b> ${data.projectType}`,

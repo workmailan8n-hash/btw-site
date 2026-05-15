@@ -43,7 +43,7 @@ export function NotesIndexContent() {
         {sorted.map((n) => (
           <li key={n.slug}>
             <Link
-              href={`/notes/${n.slug}`}
+              href={n.overrideHref ?? `/notes/${n.slug}`}
               className="group relative block rounded-sm border border-[color:var(--color-fg-dim)]/40 overflow-hidden hover:border-[color:var(--color-accent)]/60 transition-colors min-h-[500px]"
               style={{ background: n.gradient }}
             >

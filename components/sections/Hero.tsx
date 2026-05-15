@@ -36,6 +36,33 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative grid min-h-[100dvh] grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-0 px-6 md:px-12 lg:px-20 pt-28 md:pt-0 overflow-hidden"
     >
+      {/* Full-bleed background scene — never clipped by grid columns */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden>
+        {isMobile ? (
+          <HeroFallback />
+        ) : (
+          <Suspense fallback={<HeroFallback />}>
+            <HeroScene />
+          </Suspense>
+        )}
+        {/* Legibility veil under text column on desktop */}
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            background:
+              'linear-gradient(to right, var(--color-bg-base) 0%, rgba(0,0,0,0.55) 28%, transparent 55%)',
+          }}
+        />
+        {/* Mobile veil — softer, for text on top of fallback */}
+        <div
+          className="absolute inset-0 md:hidden"
+          style={{
+            background:
+              'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.55) 50%, var(--color-bg-base) 100%)',
+          }}
+        />
+      </div>
+
       <div className="relative z-10 max-w-[640px] order-2 md:order-1">
         <motion.div
           initial={{ opacity: 0, y: 8 }}
@@ -94,15 +121,11 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative h-[42vh] md:h-[85vh] w-full order-1 md:order-2">
-        {isMobile ? (
-          <HeroFallback />
-        ) : (
-          <Suspense fallback={<HeroFallback />}>
-            <HeroScene />
-          </Suspense>
-        )}
-      </div>
+      {/* Reserve right column space on desktop so text stays in left half */}
+      <div
+        className="hidden md:block h-[85vh] w-full order-1 md:order-2 pointer-events-none"
+        aria-hidden
+      />
     </section>
   );
 }

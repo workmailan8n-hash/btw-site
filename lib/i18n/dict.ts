@@ -274,6 +274,118 @@ export const dict = {
       credits:
         'Concept, brand, copy, code: BTW Studio. Pipeline orchestrated with Claude Code + a custom waterfall of 8 subagents. Deployed from spec to production in two calendar days. Source for this site is private — the agent pack that ships it is public at github.com/workmailan8n-hash/btw-agents-pack.',
     },
+    keyst: {
+      eyebrow: 'Keyst · self-hosted storefront',
+      heroBadge: 'New from BTW Studio',
+      heroTitle: 'Own-your-stack white-label storefront for digital key resellers.',
+      heroSub:
+        'Sellix is gone. Sellpass renamed to Antistock. Don't rent your store — own it.',
+      heroCta: 'View live demo →',
+      heroCtaSecondary: 'Get Keyst — $499',
+      problemHeading: 'The platform risk you're ignoring',
+      problemCards: [
+        {
+          title: 'Platforms disappear overnight',
+          body: 'Sellix was seized in 2024. Sellpass became Antistock. Every hosted storefront is a single policy change away from taking your business with it.',
+        },
+        {
+          title: 'Stripe and PayPal ban digital keys',
+          body: 'Both processors explicitly prohibit digital activation key sales in their ToS. If you're using them, you're one chargeback report from a permanent ban.',
+        },
+        {
+          title: 'Marketplace fees eat 5–10% per sale',
+          body: 'At 5–10% rake, a $1,000/mo store pays $600–1,200/year in fees — enough to own your infrastructure several times over.',
+        },
+      ],
+      whatHeading: 'What Keyst is',
+      whatItems: [
+        'Vault-themed dark storefront UI — ready to brand as your own',
+        'Atomic key delivery — keys issued exactly once, AES-256 encrypted at rest',
+        '5 payment adapters — NOWPayments, CryptoCloud, FreeKassa, Fondy, custom stub',
+        'Catalog with platform categories — Steam, Xbox, PSN, Apple, Nintendo',
+        'Distributor API stubs — plug in your key supplier without code changes',
+        'Admin panel with full audit log — every key delivery, every login',
+        'Telegram alerts to admin on every order',
+        'Setup Wizard — from blank VPS to live store in under 45 minutes',
+      ],
+      pricingHeading: 'Pricing',
+      pricingNote: 'No hidden fees. USD only. One invoice.',
+      planRecommended: 'Recommended',
+      plans: [
+        {
+          name: 'Managed Setup',
+          price: '$499',
+          period: 'setup + $49/mo',
+          highlight: true,
+          features: [
+            'Install on your VPS within 48h',
+            '1 payment gateway configured',
+            'Branding applied (logo, colors)',
+            '1-hour onboarding call',
+            'Updates included',
+            '2h support / month',
+            'Uptime monitor',
+          ],
+          cta: 'Get started →',
+        },
+        {
+          name: 'Code + Docs',
+          price: '$899',
+          period: 'one-time',
+          highlight: false,
+          features: [
+            'Full source code',
+            'shop-owner docs',
+            'Docker install guide',
+            'Community support only',
+            'No install service',
+            'No monthly updates',
+          ],
+          cta: 'Buy one-time →',
+        },
+      ],
+      howHeading: 'How it works',
+      howSteps: [
+        { n: '01', title: 'Pay', body: 'Choose your plan and complete payment. You'll receive a confirmation within minutes.' },
+        { n: '02', title: 'We install', body: 'We deploy Keyst on your VPS within 48 hours — Docker, Postgres, Redis, all wired.' },
+        { n: '03', title: 'Setup Wizard', body: 'A 5-step wizard walks you through branding, payment gateway, and first product.' },
+        { n: '04', title: 'Start selling', body: 'Your store is live. Customers buy, keys are delivered atomically, crypto works out of the box.' },
+      ],
+      demoHeading: 'See it live',
+      demoBody: 'The demo runs a real Keyst instance with sample catalog — Steam gift cards, Xbox subscriptions, PSN credits. Admin and customer sessions both available.',
+      demoCta: 'Try the live demo →',
+      demoNote: 'Admin: demo-admin@codes-shop.dev / CodesShop2026Demo! · Customer: demo-customer@codes-shop.dev / Customer2026Demo!',
+      faqHeading: 'FAQ',
+      faqItems: [
+        {
+          q: 'Can I use Stripe?',
+          a: "No. Stripe's ToS explicitly prohibits digital activation keys. Keyst ships with NOWPayments, CryptoCloud and FreeKassa instead — all of which are built for this market.",
+        },
+        {
+          q: 'What about hosting?',
+          a: 'You host on your own VPS. We recommend Hetzner CX22 (€5/month, Frankfurt) — plenty of RAM for a single-tenant store. Any Linux VPS with Docker works.',
+        },
+        {
+          q: 'Can I migrate from Sellix?',
+          a: 'Yes. Sellix exports orders and products as CSV. We help you import product listings on the $499 plan. Keys themselves need to be re-uploaded — they were never exportable from Sellix.',
+        },
+        {
+          q: 'Can I customize the UI?',
+          a: "Yes. On both plans you own the code. Change colors, fonts, layout — it's Next.js and Tailwind, no proprietary templating layer.",
+        },
+        {
+          q: 'What if I cancel the subscription?',
+          a: 'Your license stays. The store keeps running. You stop receiving updates and the monthly 2h support. The $49/mo is for updates and maintenance, not access.',
+        },
+        {
+          q: 'What is the support response time?',
+          a: 'On the $49/mo plan: 24–48h for questions and bugs. On the one-time plan: community support (GitHub issues), best-effort.',
+        },
+      ],
+      contactHeading: 'Get Keyst',
+      contactSub: 'Fill the form and we'll send you next steps within 24 hours.',
+      socialProof: 'First customers — stay tuned.',
+    },
     about: {
       heading: 'About',
       manifestoHeading: 'We build software that actually ships.',
@@ -577,6 +689,120 @@ export const dict = {
       creditsHeading: 'Credits',
       credits:
         'Концепт, бренд, копірайт, код: BTW Studio. Пайплайн оркестрований Claude Code + кастомний waterfall з 8 субагентів. Задеплоєний від спеки до продакшну за два календарні дні. Сорс цього сайту приватний — agent pack який його збирає публічний на github.com/workmailan8n-hash/btw-agents-pack.',
+    },
+    keyst: {
+      eyebrow: 'Keyst · self-hosted storefront',
+      heroBadge: 'Новинка від BTW Studio',
+      heroTitle: 'White-label магазин цифрових ключів — у вашій власності.',
+      heroSub:
+        'Sellix закрито. Sellpass перейменовано на Antistock. Не орендуйте свій магазин — володійте ним.',
+      heroCta: 'Переглянути демо →',
+      heroCtaSecondary: 'Отримати Keyst — $499',
+      problemHeading: 'Платформний ризик, який ви ігноруєте',
+      problemCards: [
+        {
+          title: 'Платформи зникають за ніч',
+          body: 'Sellix був вилучений у 2024. Sellpass став Antistock. Кожен хостований магазин — це одна зміна правил від знищення вашого бізнесу.',
+        },
+        {
+          title: 'Stripe і PayPal забороняють цифрові ключі',
+          body: "Обидва процесори прямо забороняють продаж ключів активації у своїх ToS. Якщо ви їх використовуєте — один звіт про chargeback може закрити рахунок назавжди.",
+        },
+        {
+          title: 'Комісії маркетплейсів — 5–10% з продажу',
+          body: 'При 5–10% rake магазин на $1 000/міс платить $600–1 200/рік у комісіях — достатньо, щоб кілька разів купити власну інфраструктуру.',
+        },
+      ],
+      whatHeading: 'Що таке Keyst',
+      whatItems: [
+        'Vault-стиль dark storefront UI — готовий до брендингу під вас',
+        'Атомарна видача ключів — кожен ключ видається рівно один раз, шифрування AES-256',
+        '5 платіжних адаптерів — NOWPayments, CryptoCloud, FreeKassa, Fondy, кастомний stub',
+        'Каталог з платформними категоріями — Steam, Xbox, PSN, Apple, Nintendo',
+        'Стаби дистрибьюторського API — підключіть свого постачальника ключів без змін коду',
+        'Адмінка з повним audit log — кожна видача ключа, кожен логін',
+        'Telegram-сповіщення адміну на кожне замовлення',
+        'Setup Wizard — від чистого VPS до живого магазину менш ніж за 45 хвилин',
+      ],
+      pricingHeading: 'Ціни',
+      pricingNote: 'Без прихованих комісій. Тільки USD. Один рахунок.',
+      planRecommended: 'Рекомендовано',
+      plans: [
+        {
+          name: 'Managed Setup',
+          price: '$499',
+          period: 'setup + $49/міс',
+          highlight: true,
+          features: [
+            'Встановлення на ваш VPS за 48 год',
+            '1 платіжний шлюз налаштований',
+            'Брендинг застосований (логотип, кольори)',
+            '1 год onboarding call',
+            'Оновлення включені',
+            '2 год підтримки / місяць',
+            'Uptime monitor',
+          ],
+          cta: 'Почати →',
+        },
+        {
+          name: 'Код + Документація',
+          price: '$899',
+          period: 'one-time',
+          highlight: false,
+          features: [
+            'Повний вихідний код',
+            'Документація shop-owner',
+            'Гайд встановлення Docker',
+            'Тільки community support',
+            'Без сервісу встановлення',
+            'Без місячних оновлень',
+          ],
+          cta: 'Купити one-time →',
+        },
+      ],
+      howHeading: 'Як це працює',
+      howSteps: [
+        { n: '01', title: 'Оплата', body: 'Оберіть план і завершіть оплату. Підтвердження прийде за кілька хвилин.' },
+        { n: '02', title: 'Ми встановлюємо', body: 'Розгортаємо Keyst на вашому VPS за 48 год — Docker, Postgres, Redis, все підключено.' },
+        { n: '03', title: 'Setup Wizard', body: '5-кроковий майстер налаштування: брендинг, платіжний шлюз, перший товар.' },
+        { n: '04', title: 'Починайте продавати', body: 'Ваш магазин живий. Покупці купують, ключі видаються атомарно, крипто працює з коробки.' },
+      ],
+      demoHeading: 'Подивіться живий приклад',
+      demoBody:
+        'Демо — реальний екземпляр Keyst зі зразковим каталогом: Steam gift cards, підписки Xbox, кредити PSN. Доступні сесії адміна і покупця.',
+      demoCta: 'Спробувати живе демо →',
+      demoNote:
+        'Адмін: demo-admin@codes-shop.dev / CodesShop2026Demo! · Покупець: demo-customer@codes-shop.dev / Customer2026Demo!',
+      faqHeading: 'FAQ',
+      faqItems: [
+        {
+          q: 'Чи можна використовувати Stripe?',
+          a: 'Ні. ToS Stripe прямо забороняє цифрові ключі активації. Keyst постачається з NOWPayments, CryptoCloud і FreeKassa — усі вони розроблені для цього ринку.',
+        },
+        {
+          q: 'А хостинг?',
+          a: 'Ви хостите на власному VPS. Рекомендуємо Hetzner CX22 (€5/міс, Frankfurt) — достатньо RAM для single-tenant магазину. Підходить будь-який Linux VPS з Docker.',
+        },
+        {
+          q: 'Чи можна мігрувати з Sellix?',
+          a: 'Так. Sellix експортує замовлення і товари у CSV. На плані $499 ми допоможемо з імпортом лістингів товарів. Самі ключі потрібно завантажити знову — Sellix ніколи не давав їх експортувати.',
+        },
+        {
+          q: 'Чи можна кастомізувати UI?',
+          a: 'Так. На обох планах код у вашій власності. Змінюйте кольори, шрифти, лейаут — це Next.js і Tailwind, без пропрієтарного шаблонізатора.',
+        },
+        {
+          q: 'Що буде, якщо я скасую підписку?',
+          a: 'Ваша ліцензія залишається. Магазин продовжує працювати. Ви перестаєте отримувати оновлення і 2 год підтримки на місяць. $49/міс — за оновлення і обслуговування, не за доступ.',
+        },
+        {
+          q: 'Який час відповіді підтримки?',
+          a: 'На плані $49/міс: 24–48 год на питання і баги. На one-time плані: community support (GitHub issues), best-effort.',
+        },
+      ],
+      contactHeading: 'Отримати Keyst',
+      contactSub: 'Заповніть форму, і ми надішлемо наступні кроки протягом 24 годин.',
+      socialProof: 'Перші клієнти — скоро.',
     },
     about: {
       heading: 'Про нас',

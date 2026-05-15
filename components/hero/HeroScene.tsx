@@ -127,7 +127,8 @@ export function HeroScene() {
       gl={{ antialias: true, alpha: true }}
       style={{ background: 'transparent' }}
     >
-      <PerspectiveCamera makeDefault fov={38} position={[0, 0, 4.5]} />
+      {/* Camera offset to the left → scene renders right-of-center on canvas */}
+      <PerspectiveCamera makeDefault fov={36} position={[-1.6, 0, 5.4]} />
       <Suspense fallback={null}>
         <ambientLight intensity={0.25} />
         <directionalLight position={[3, 4, 5]} intensity={1.4} />
