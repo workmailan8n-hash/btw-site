@@ -356,6 +356,21 @@ export const dict = {
       demoCta: 'Try the live demo →',
       demoNote: 'Admin: demo-admin@codes-shop.dev / CodesShop2026Demo! · Customer: demo-customer@codes-shop.dev / Customer2026Demo!',
       faqHeading: 'FAQ',
+      installService: {
+        title: 'Install for me',
+        subtitle: 'Add-on · +$150 one-off',
+        badge: 'For non-technical buyers',
+        body: "Never used SSH or Docker? Add this. We'll SSH into your VPS, run the bootstrap, configure Caddy + DNS, set up your first payment gateway, and hand over admin credentials. Working shop within 4 hours of receiving VPS access.",
+        bullets: [
+          'Remote install on your Hetzner, DigitalOcean, or any VPS',
+          'Caddy reverse proxy + DNS configured',
+          'First payment gateway set up and tested',
+          'Admin credentials handed over — you own everything',
+        ],
+        cta: 'Add install — pay total: $649 →',
+        ctaAlt: 'or $1,049 with Code + Docs',
+        fine: 'If you can run one terminal command, you don\'t need this — the bootstrap script handles everything.',
+      },
       faqItems: [
         {
           q: 'Can I use Stripe?',
@@ -381,9 +396,13 @@ export const dict = {
           q: 'What is the support response time?',
           a: 'On the $49/mo plan: 24–48h for questions and bugs. On the one-time plan: community support (GitHub issues), best-effort.',
         },
+        {
+          q: 'Do I need DevOps experience?',
+          a: 'No. Buy the Install add-on (+$150) and we handle the entire deployment — you just give us VPS access and a domain. Otherwise, the bootstrap script is one command and we provide written guides.',
+        },
       ],
       contactHeading: 'Get Keyst',
-      contactSub: 'Fill the form and we'll send you next steps within 24 hours.',
+      contactSub: "Fill the form and we'll send you next steps within 24 hours.",
       socialProof: 'First customers — stay tuned.',
     },
     about: {
@@ -774,6 +793,21 @@ export const dict = {
       demoNote:
         'Адмін: demo-admin@codes-shop.dev / CodesShop2026Demo! · Покупець: demo-customer@codes-shop.dev / Customer2026Demo!',
       faqHeading: 'FAQ',
+      installService: {
+        title: 'Встановити за мене',
+        subtitle: 'Додаток · +$150 one-off',
+        badge: 'Для нетехнічних покупців',
+        body: 'Ніколи не користувались SSH чи Docker? Додайте це. Ми зайдемо на ваш VPS, запустимо bootstrap, налаштуємо Caddy + DNS, підключимо перший платіжний шлюз і передамо адмін-доступ. Робочий магазин протягом 4 годин після отримання доступу до VPS.',
+        bullets: [
+          'Віддалене встановлення на Hetzner, DigitalOcean або будь-який VPS',
+          'Caddy reverse proxy + DNS налаштовано',
+          'Перший платіжний шлюз підключено і протестовано',
+          'Адмін-доступ переданий — все у вашій власності',
+        ],
+        cta: 'Додати встановлення — всього: $649 →',
+        ctaAlt: 'або $1 049 з Кодом + Документацією',
+        fine: 'Якщо ви можете виконати одну команду в терміналі — це вам не потрібно. Bootstrap-скрипт робить все сам.',
+      },
       faqItems: [
         {
           q: 'Чи можна використовувати Stripe?',
@@ -798,6 +832,10 @@ export const dict = {
         {
           q: 'Який час відповіді підтримки?',
           a: 'На плані $49/міс: 24–48 год на питання і баги. На one-time плані: community support (GitHub issues), best-effort.',
+        },
+        {
+          q: 'Чи потрібен досвід DevOps?',
+          a: 'Ні. Купіть додаток Install (+$150) і ми повністю розгорнемо — вам потрібно лише дати доступ до VPS і домен. В іншому випадку, bootstrap-скрипт — це одна команда, і ми надаємо письмові гайди.',
         },
       ],
       contactHeading: 'Отримати Keyst',

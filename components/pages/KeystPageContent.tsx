@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ease, dur, stagger } from '@/lib/motion/tokens';
 import { useLocale } from '@/lib/i18n/context';
@@ -300,6 +301,76 @@ function PricingSection({ k }: { k: ReturnType<typeof useLocale>['t']['keyst'] }
           </FadeUp>
         ))}
       </div>
+
+      <FadeUp delay={0.15}>
+        <div
+          className="mt-6 max-w-[860px] p-6 md:p-8 border flex flex-col md:flex-row md:items-start gap-5 md:gap-6"
+          style={{
+            borderColor: 'rgba(232,39,75,0.35)',
+            background: 'rgba(232,39,75,0.03)',
+          }}
+        >
+          <div
+            className="shrink-0 flex items-center justify-center w-12 h-12 rounded-sm"
+            style={{ background: 'rgba(232,39,75,0.12)' }}
+          >
+            <Wrench className="w-6 h-6" style={{ color: '#E8274B' }} aria-hidden />
+          </div>
+
+          <div className="flex-1">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h3 className="font-[var(--font-sans-alt)] font-semibold text-[color:var(--color-fg-primary)]">
+                {k.installService.title}
+              </h3>
+              <span className="font-mono text-xs text-[color:var(--color-fg-meta)]">
+                {k.installService.subtitle}
+              </span>
+              <span
+                className="font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-0.5"
+                style={{ background: 'rgba(232,39,75,0.18)', color: '#E8274B' }}
+              >
+                {k.installService.badge}
+              </span>
+            </div>
+
+            <p className="mt-3 text-[15px] text-[color:var(--color-fg-primary)] max-w-[640px]">
+              {k.installService.body}
+            </p>
+
+            <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+              {k.installService.bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2 text-[14px]">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 shrink-0 font-mono text-xs"
+                    style={{ color: '#E8274B' }}
+                  >
+                    —
+                  </span>
+                  <span className="text-[color:var(--color-fg-primary)]">{b}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+              <a
+                href="#keyst-contact?install=1"
+                className="inline-flex items-center justify-center px-5 py-2.5 font-[var(--font-sans-alt)] font-semibold text-sm"
+                style={{ background: '#E8274B', color: '#fff' }}
+              >
+                {k.installService.cta}
+              </a>
+              <span className="font-mono text-xs text-[color:var(--color-fg-meta)]">
+                {k.installService.ctaAlt}
+              </span>
+            </div>
+
+            <p className="mt-3 text-xs text-[color:var(--color-fg-muted)] italic">
+              {k.installService.fine}
+            </p>
+          </div>
+        </div>
+      </FadeUp>
     </section>
   );
 }
