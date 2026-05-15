@@ -7,7 +7,7 @@ import { ease, dur, stagger } from '@/lib/motion/tokens';
 import { useLocale } from '@/lib/i18n/context';
 import { ContactForm } from '@/components/contact/ContactForm';
 
-const DEMO_URL = 'https://codes-shop-demo.fly.dev';
+const DEMO_URL = 'https://keyst-demo.fly.dev';
 
 function FadeUp({
   children,
