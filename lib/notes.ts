@@ -45,7 +45,7 @@ export const notes: CaseStudy[] = [
     status: 'Live',
     role: 'Full-cycle SaaS · spec to paid subscribers',
     timeline: '4 weeks · Mar–Apr 2026',
-    href: 'https://courseai-jade.vercel.app',
+    href: 'https://courses.btwstudio.dev',
     accent: '#B8A6FF',
     gradient:
       'radial-gradient(ellipse at 60% 30%, rgba(184,166,255,0.4), transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(255,184,107,0.2), transparent 60%)',
@@ -148,7 +148,7 @@ export const notes: CaseStudy[] = [
     status: 'Live',
     role: 'Personal AI ops · single-user by design',
     timeline: '4 weeks · Apr–May 2026',
-    href: 'https://nox-landing-lemon.vercel.app',
+    href: 'https://nox.btwstudio.dev',
     accent: '#6EA8FF',
     gradient:
       'radial-gradient(ellipse at 25% 30%, rgba(110,168,255,0.4), transparent 55%), radial-gradient(ellipse at 80% 70%, rgba(184,166,255,0.22), transparent 60%)',
@@ -324,7 +324,7 @@ export const notes: CaseStudy[] = [
     status: 'Live',
     role: 'Realtime ops viz · Canvas 2D + WebSocket',
     timeline: '6 weeks · Mar–May 2026',
-    href: 'https://agent-dashboard-ancient-mountain-4835.fly.dev',
+    href: 'https://dash.btwstudio.dev',
     accent: '#9EFF6E',
     gradient:
       'radial-gradient(ellipse at 30% 25%, rgba(158,255,110,0.35), transparent 60%), radial-gradient(ellipse at 80% 75%, rgba(110,168,255,0.2), transparent 60%)',

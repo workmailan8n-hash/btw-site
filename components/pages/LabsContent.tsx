@@ -24,7 +24,7 @@ export function LabsContent() {
         <ProjectTile
           title="Agent Dashboard"
           tagline="Real-time observatory for 20+ Claude Code agents. Pixel-art canvas at 60fps. Example of the ops dashboards we build for teams with a lot of agents or background workers."
-          href="https://agent-dashboard-ancient-mountain-4835.fly.dev"
+          href="https://dash.btwstudio.dev"
           year="2026"
           status="Live"
           accent="#9EFF6E"
@@ -41,9 +41,9 @@ export function LabsContent() {
         <ProjectTile
           title="Claude Agents Marketplace"
           tagline="Public catalog of the 37 subagents + 17 skills that power this studio. Browse, copy, install. Open-source seed repo companion."
-          href="https://github.com/workmailan8n-hash/btw-agents-pack"
+          href="https://agents.btwstudio.dev"
           year="2026"
-          status="Open source"
+          status="Live"
           accent="#B8A6FF"
           gradient="radial-gradient(ellipse at 30% 30%, rgba(184,166,255,0.38), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.18), transparent 60%)"
           stack={['Next.js 15', 'gray-matter', 'Fuse.js', 'shiki', 'Fly.io']}

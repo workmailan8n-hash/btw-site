@@ -280,10 +280,7 @@ export function AgentDashboardEssay() {
           <Ul>
             <li>
               Live since 2026-03-23 at{' '}
-              <ExtA href="https://agent-dashboard-ancient-mountain-4835.fly.dev">
-                agent-dashboard-ancient-mountain-4835.fly.dev
-              </ExtA>
-              .
+              <ExtA href="https://dash.btwstudio.dev">dash.btwstudio.dev</ExtA>.
             </li>
             <li>Canvas 2D at 60fps on 20+ live agents.</li>
             <li>60 MB Docker image, 180 MB resident memory, fra region, shared-cpu-1x.</li>

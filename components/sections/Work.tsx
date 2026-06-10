@@ -22,7 +22,7 @@ const projects: Project[] = [
     name: 'CourseAI',
     tagKey: 'AI course generator · SaaS with Stripe',
     year: '2026',
-    href: 'https://courseai-jade.vercel.app',
+    href: 'https://courses.btwstudio.dev',
     status: 'Live',
     stack: ['Next.js', 'Prisma', 'Gemini', 'Stripe'],
     accent: '#B8A6FF',
